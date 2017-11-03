@@ -17,8 +17,7 @@ function startGame() {
 		sunObj.style.left = "-50px";
 		
 		var numbersForItemsArray = document.getElementsByClassName("item");
-		//Can I optimase this ...?
-		for(var t = 0; t < numbersForItemsArray.length; ++t) {
+		for(var t = numbersForItemsArray.length - 1; t >= 0; --t) {
 			y = numbersForItemsArray[t].childNodes[0];
 			if( y != undefined) { 
 				numbersForItemsArray[t].removeChild(y);
@@ -30,9 +29,8 @@ function startGame() {
 		for(var t = numbersForItemsArray.length - 1; t >= 0 ; --t) {
 			parent.removeChild(numbersForItemsArray[t]);
 		}
-		//Can I optimase this ...?
-		for(var t = 0; t < arrClearFix.length; ++t) {
-				parent.removeChild(arrClearFix[t]);
+		for(var t = arrClearFix.length - 1; t >= 0 ; --t) {
+			parent.removeChild(arrClearFix[t]);
 		}
 		parent.removeChild(document.getElementsByClassName("startGameButton")[0]);
 		startGame();
@@ -87,9 +85,9 @@ function startGame() {
 	}
 		
 	function checkGameEnding(){
-		
 		var bEndGame = true;
-		for(var t = 0; t < numbersForItems.length - 1; ++t) {
+		var numberCounts = numbersForItems.length - 1;
+		for(var t = 0; t < numberCounts; ++t) {
 			if(numbersForItems[t] != t + 1) {
 				bEndGame = false;
 				break;
@@ -102,7 +100,8 @@ function startGame() {
 			sunObj.style.left = document.getElementById("gamefield").getBoundingClientRect().left + document.body.scrollLeft;
 			TweenMax.staggerFrom("#gameIsOver", 0.5, {opacity:0, y:0, rotation: 360, delay:0.5}, 0.2);
 			var numbersForItemsArray = document.getElementsByClassName("item");
-			for(var t = 0; t < numbersForItemsArray.length; ++t) {
+			var numbersForItemsArrayLength = numbersForItemsArray.length;
+			for(var t = 0; t < numbersForItemsArrayLength; ++t) {
 				numbersForItemsArray[t].removeEventListener("mouseenter", shiftItem);
 			}
 		}
@@ -112,7 +111,7 @@ function startGame() {
 		var rect = this.getBoundingClientRect();
 		var curX = rect.left + 30;
 		var curY = rect.top + 30;
-		//finding supposed empty item's position
+		//the empty item supposed position
 		var arrPositions = [
 			{x: curX - 60 , y: curY},
 			{x: curX , y: curY - 60},
@@ -175,13 +174,8 @@ function startGame() {
 					numbersForItems[t2] = tt;
 					//console.log(numbersForItems);
 					break;
-					
-				
 			}
-				
-			
 		}
 		checkGameEnding();
 	}
- 
-}
+ }

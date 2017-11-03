@@ -1,0 +1,109 @@
+body {
+	background: url("../images/christmas-background.jpg") top center no-repeat;
+	padding-top: 10px;
+	margin: 0 auto;
+	-webkit-user-select: none; /* Chrome, Opera, Safari */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    -khtml-user-select: none;
+}
+.lock-screen {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+}
+h1 {
+	text-align: center;
+	color:  #993399;
+	font-size: 30px;
+	margin: 0 auto;
+	text-shadow: 2px 2px #e6b3e6;
+	min-width: 250px;
+}
+#gamefield {
+	cursor: pointer;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding: 6px;
+	padding-right: 12px;
+	padding-bottom: 12px;
+	/*position: fixed;*/
+	max-width: 290px;
+	border: solid green 2px;
+	box-shadow: 5px 5px 2px grey;
+	background-color:rgba(192,192,192,0.3);
+	 display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;   
+    flex-wrap: wrap;
+	justify-content: center;
+}
+.item{
+	background: #c653c6;
+	background: -webkit-linear-gradient(#c653c6, #e6b3e6, #c653c6); /* For Safari 5.1 to 6.0 */
+	background: -moz-linear-gradient(#c653c6, #e6b3e6, #c653c6); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#c653c6, #e6b3e6, #c653c6); /* Standard syntax */
+	border-radius: 25%;
+	box-shadow: 5px 5px 2px grey;
+	width: 60px;
+	height: 45px;
+	position: relative;
+	margin-left: 6px;
+	margin-top: 6px;
+	float:left;
+	color: #4d194d;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 15px;
+	left: 0;
+	top: 0;
+}
+.startGameButton{ 
+	background: #c653c6;
+	background: -webkit-linear-gradient(#c653c6, #e6b3e6, #c653c6); /* For Safari 5.1 to 6.0 */
+	background: linear-gradient(#c653c6, #e6b3e6, #c653c6); /* Standard syntax */
+	border: solid #ad38ad 1px;
+	box-shadow: 5px 5px 2px grey;
+	padding-top: 6px;
+	font-size: 16px;
+	margin: 0 auto;
+	margin-top: 12px;
+	margin-bottom: 10px;
+	width: 100px;
+	height: 25px;
+	border-radius: 15px;
+	text-align: center;
+}
+.empty {
+	background: none;
+	margin-left: 6px;
+	margin-top: 6px;
+	box-shadow: none;
+	left: 0;
+	top: 0;
+}
+.clearfix {
+	clear:both;
+	height:0px;
+	border-left: solid green 1px;
+}
+#gameIsOver {
+	background: url("../images/409586931.png");
+	width: 150px;
+	height:150px;
+	z-index: 100;
+	top:-100px;
+	left:-100px;
+	position: absolute;
+	opacity:0;		
+}
+#floating {
+	border:solid red 2px;
+	width: 75px;
+	-ms-touch-action: none;
+	left: 0;
+	top: 0;
+	position: relative;
+}

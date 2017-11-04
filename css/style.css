@@ -3,15 +3,15 @@ body {
 	padding-top: 10px;
 	margin: 0 auto;
 	-webkit-user-select: none; /* Chrome, Opera, Safari */
-    -moz-user-select: none; /* Firefox 2+ */
-    -ms-user-select: none; /* IE 10+ */
-    -khtml-user-select: none;
+	-moz-user-select: none; /* Firefox 2+ */
+	-ms-user-select: none; /* IE 10+ */
+	-khtml-user-select: none;
 }
 .lock-screen {
-    height: 100%;
-    overflow: hidden;
-    width: 100%;
-    position: fixed;
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+	position: fixed;
 }
 h1 {
 	text-align: center;
@@ -33,10 +33,10 @@ h1 {
 	border: solid green 2px;
 	box-shadow: 5px 5px 2px grey;
 	background-color:rgba(192,192,192,0.3);
-	 display: -webkit-flex; /* Safari */
-    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
-    display: flex;   
-    flex-wrap: wrap;
+	display: -webkit-flex; /* Safari */
+	-webkit-flex-wrap: wrap; /* Safari 6.1+ */
+	display: flex;   
+	flex-wrap: wrap;
 	justify-content: center;
 }
 .item{

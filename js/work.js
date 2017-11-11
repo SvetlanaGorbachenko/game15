@@ -7,7 +7,7 @@ window.onload = function() {
 	TweenMax.to(".logo", 2, {width:800});
 }
 
-function Game() {
+var Game = function () {
 	this.sunObj = 0; //congratulationObj
 	Game.numbersForItems = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 	this.startGame();

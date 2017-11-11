@@ -1,2 +1,2 @@
 # game15
-The simple game for my daughter :-)
+This is my implementation of the well known game for my daughter :-)
